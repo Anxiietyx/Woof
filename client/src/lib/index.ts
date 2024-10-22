@@ -1,6 +1,5 @@
 export const getData = async (endpoint: string) => {
   try {
-    console.log(endpoint)
     const response = await fetch(endpoint, {
       method: "GET",
       headers: {

@@ -27,7 +27,12 @@ const UserInfo = ({ currentUser }: UserTypes) => {
               </span>
             </h2>
             <p className="text-start *:mt-6 max-w-3xl text-base mt-3 leading-6 text-gray-300">
-              Hope you have a good time here 
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Suscipit, minus rem. Quaerat natus in sit cupiditate expedita odio
+              at sed saepe quos? Maiores, labore suscipit rerum ipsa iste eius
+              voluptates. Dolore laboriosam aut alias iusto quidem
+              necessitatibus quibusdam soluta in enim veritatis, commodi
+              voluptatem inventore iste harum est id autem.
             </p>
           </div>
         </div>

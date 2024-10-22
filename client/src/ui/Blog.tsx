@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import Title from "./Title";
@@ -10,6 +11,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchData = async () => {
       const endpoint = `${config?.baseUrl}/blogs`;
+      console.log(endpoint);
       try {
         const data = await getData(endpoint);
         setBlogsData(data);

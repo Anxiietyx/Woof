@@ -1,3 +1,4 @@
+// @ts-ignore
 import React from "react";
 import Container from "./Container";
 import { payment } from "../assets";

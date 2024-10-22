@@ -14,10 +14,7 @@ const Favorite = () => {
               Favorite Products
             </h2>
             <p className="mt-2 text-sm text-gray-500 max-w-[500px] tracking-wide">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-              ut commodi ipsam provident numquam, odit cupiditate, incidunt cum
-              pariatur excepturi dicta laboriosam error quo dolore libero.
-              Maxime ad laborum libero?
+                Pew pew is not here
             </p>
           </div>
           <div className="mt-6 flow-root px-4 sm:mt-10 sm:px-0">
@@ -34,10 +31,7 @@ const Favorite = () => {
             Nothing added to Favorite
           </h2>
           <p className="text-lg tracking-wide leading-6 text-gray-500">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
-            harum ducimus, quod amet pariatur omnis ex dolorem, distinctio
-            molestiae aspernatur iste aperiam nostrum tempore accusamus modi
-            quos culpa corrupti ea.
+              Did you forget something?
           </p>
           <Link
             to={"/product"}

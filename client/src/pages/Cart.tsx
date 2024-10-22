@@ -9,6 +9,7 @@ import FormattedPrice from "../ui/FormattedPrice";
 
 const Cart = () => {
   const [totalAmt, setTotalAmt] = useState({ regular: 0, discounted: 0 });
+  // @ts-ignore
   const { cartProduct, currentUser } = store();
 
   const shippingAmt = 25;
@@ -109,10 +110,7 @@ const Cart = () => {
             Shopping Cart
           </h1>
           <p className="text-lg max-w-[600px] text-center text-gray-600 tracking-wide leading-6">
-            Your cart is empty. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Repellendus libero ab nulla iure quibusdam
-            obcaecati debitis minima explicabo quidem tenetur ad, voluptate
-            iusto ratione natus. Maxime molestiae doloremque eaque nesciunt!
+            Your cart is empty. 
           </p>
           <Link
             to={"/product"}

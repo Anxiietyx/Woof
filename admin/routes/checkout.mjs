@@ -35,6 +35,7 @@ router.post("/checkout", async (req, res) => {
         email,
       },
     });
+    console.log(session);
 
     res.json({
       message: "Server is connected",

@@ -5,11 +5,14 @@ import { config } from "../../config";
 
 const CheckoutBtn = ({ products }: { products: ProductProps[] }) => {
   const { currentUser } = store();
-  const publishableKey = "pk_test_51QAUnlBFwTr1kISwmfHh8Iazu6hYTh7UtxtROKaAbxnZcTLUnbFYDWpEQlqaVGXSW9FPH0zUBEcsXj0OfDGbTesZ00u4yWrtNW";
+  console.log(currentUser);
+  const publishableKey =
+    "pk_test_51QBKGJICG69IN2MyBZ1jPWUpaZeojZlp6IThw4NWJjAa3k4TXfahZIcVihdZ1g7InmLEUZY62nEeoYigvF2BU50000HUiZwnI9";
   const stripePromise = loadStripe(publishableKey);
-
+  console.log(stripePromise);
   const handleCheckout = async () => {
     const stripe = await stripePromise;
+    console.log(`${config?.baseUrl}/checkout`);
     const response = await fetch(`${config?.baseUrl}/checkout`, {
       method: "POST",
       headers: {
@@ -20,6 +23,7 @@ const CheckoutBtn = ({ products }: { products: ProductProps[] }) => {
         email: currentUser?.email,
       }),
     });
+    console.log(response);
     const checkoutSession = await response?.json();
     const result: any = await stripe?.redirectToCheckout({
       sessionId: checkoutSession.id,

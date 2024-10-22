@@ -56,10 +56,7 @@ const Orders = () => {
             <span className="text-black font-semibold">{orders?.length}</span>
           </p>
           <p className="text-sm max-w-[600px] tracking-wide text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-            porro, nemo quisquam explicabo, mollitia inventore nobis id maiores
-            odio incidunt quidem rerum delectus quaerat similique voluptates
-            dolores perferendis numquam quae.
+                
           </p>
           <div className="flex flex-col gap-3">
             <div className="space-y-6 divide-y divide-gray-900/10">

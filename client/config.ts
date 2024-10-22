@@ -6,7 +6,7 @@ const checkConfig = (server: string): Config | {} => {
   switch (server) {
     case "production":
       config = {
-        baseUrl: "https://woof-rouge.vercel.app",
+        baseUrl: "http://localhost:8000",
       };
       break;
     case "local":

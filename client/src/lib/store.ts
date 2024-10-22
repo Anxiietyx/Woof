@@ -156,7 +156,7 @@ export const store = create<StoreType>()(
       },
     }),
     {
-      name: "khunto-storage",
+      name: "supergear-storage",
       storage: customStorage,
     }
   )
