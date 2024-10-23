@@ -7,6 +7,7 @@ import ProductList from "./ui/ProductList";
 import DiscountedBanner from "./ui/DiscountedBanner";
 import Blog from "./ui/Blog";
 
+
 function App() {
   return (
     <main>

@@ -2,7 +2,7 @@ import { useState } from "react";
 ("./Login");
 import Label from "./Label";
 import { MdPhotoLibrary } from "react-icons/md";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { auth, db } from "../lib/firebase";
 import upload from "../lib/upload";
 import { doc, setDoc } from "firebase/firestore";
@@ -44,6 +44,10 @@ const Registration = () => {
         avatar: imageUrl,
         id: res.user.uid,
       });
+
+      await sendEmailVerification(res.user);
+      alert("Verification email sent. Please check your inbox.");
+
       setLogin(true);
     } catch (error: any) {
       let errorMessage;

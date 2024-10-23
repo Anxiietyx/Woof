@@ -1,18 +1,28 @@
 import { useState } from "react";
 import Label from "./Label";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../lib/firebase";
 import Loading from "./Loading";
 
 const Login = ({ setLogin }: { setLogin: any }) => {
   const [loading, setLoading] = useState(false);
   const [errMsg, setErrMsg] = useState("");
+
   const handleLogin = async (e: any) => {
     e.preventDefault();
     try {
       setLoading(true);
       const formData = new FormData(e.target);
       const { email, password }: any = Object.fromEntries(formData);
+
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;  
+
+      if (!user.emailVerified) {
+        setErrMsg("Please verify your email address before logging in.");
+        auth.signOut(); 
+        return;
+      }
 
       await signInWithEmailAndPassword(auth, email, password);
     } catch (error: any) {
@@ -30,7 +40,6 @@ const Login = ({ setLogin }: { setLogin: any }) => {
         case "auth/invalid-credential":
           errorMessage = "Email or Password not matched";
           break;
-        // Add more cases as needed
         default:
           errorMessage = "An error occurred. Please try again.";
       }
@@ -40,6 +49,20 @@ const Login = ({ setLogin }: { setLogin: any }) => {
       setLoading(false);
     }
   };
+
+  const handleGoogleLogin = async () => {
+    try {
+      setLoading(true);
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+    } catch (error: any) {
+      console.log("Google Sign-In Error", error);
+      setErrMsg("Failed to sign in with Google. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="bg-gray-950 rounded-lg">
       <form
@@ -80,11 +103,17 @@ const Login = ({ setLogin }: { setLogin: any }) => {
           </p>
         )}
         <button
-          //   disabled={loading}
           type="submit"
           className="mt-5 bg-indigo-700 w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-indigo-600 duration-200"
         >
           {loading ? "Loading..." : "Login"}
+        </button>
+        <button
+          type="button"
+          onClick={handleGoogleLogin}
+          className="mt-3 bg-red-600 w-full py-2 uppercase text-base font-bold tracking-wide text-gray-300 rounded-md hover:text-white hover:bg-red-500 duration-200"
+        >
+          {loading ? "Loading..." : "Sign in with Google"}
         </button>
       </form>
       <p className="text-sm leading-6 text-gray-400 text-center -mt-2 py-10">

@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth , GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -21,3 +21,10 @@ export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 export const db = getFirestore();
 export const storage = getStorage();
+
+export const GoogleSignIn = async () => {
+  const provider = new GoogleAuthProvider();
+  const result = await signInWithPopup(auth, provider);
+
+  return result
+};
