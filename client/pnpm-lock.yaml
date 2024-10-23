@@ -11,6 +11,12 @@ importers:
       '@headlessui/react':
         specifier: ^2.0.4
         version: 2.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@sentry/react':
+        specifier: ^8.35.0
+        version: 8.35.0(react@18.3.1)
+      '@sentry/tracing':
+        specifier: ^7.114.0
+        version: 7.114.0
       '@stripe/stripe-js':
         specifier: ^4.0.0
         version: 4.0.0
@@ -808,6 +814,64 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@sentry-internal/browser-utils@8.35.0':
+    resolution: {integrity: sha512-uj9nwERm7HIS13f/Q52hF/NUS5Al8Ma6jkgpfYGeppYvU0uSjPkwMogtqoJQNbOoZg973tV8qUScbcWY616wNA==}
+    engines: {node: '>=14.18'}
+
+  '@sentry-internal/feedback@8.35.0':
+    resolution: {integrity: sha512-7bjSaUhL0bDArozre6EiIhhdWdT/1AWNWBC1Wc5w1IxEi5xF7nvF/FfvjQYrONQzZAI3HRxc45J2qhLUzHBmoQ==}
+    engines: {node: '>=14.18'}
+
+  '@sentry-internal/replay-canvas@8.35.0':
+    resolution: {integrity: sha512-TUrH6Piv19kvHIiRyIuapLdnuwxk/Un/l1WDCQfq7mK9p1Pac0FkQ7Uufjp6zY3lyhDDZQ8qvCS4ioCMibCwQg==}
+    engines: {node: '>=14.18'}
+
+  '@sentry-internal/replay@8.35.0':
+    resolution: {integrity: sha512-3wkW03vXYMyWtTLxl9yrtkV+qxbnKFgfASdoGWhXzfLjycgT6o4/04eb3Gn71q9aXqRwH17ISVQbVswnRqMcmA==}
+    engines: {node: '>=14.18'}
+
+  '@sentry-internal/tracing@7.114.0':
+    resolution: {integrity: sha512-dOuvfJN7G+3YqLlUY4HIjyWHaRP8vbOgF+OsE5w2l7ZEn1rMAaUbPntAR8AF9GBA6j2zWNoSo8e7GjbJxVofSg==}
+    engines: {node: '>=8'}
+
+  '@sentry/browser@8.35.0':
+    resolution: {integrity: sha512-WHfI+NoZzpCsmIvtr6ChOe7yWPLQyMchPnVhY3Z4UeC70bkYNdKcoj/4XZbX3m0D8+71JAsm0mJ9s9OC3Ue6MQ==}
+    engines: {node: '>=14.18'}
+
+  '@sentry/core@7.114.0':
+    resolution: {integrity: sha512-YnanVlmulkjgZiVZ9BfY9k6I082n+C+LbZo52MTvx3FY6RE5iyiPMpaOh67oXEZRWcYQEGm+bKruRxLVP6RlbA==}
+    engines: {node: '>=8'}
+
+  '@sentry/core@8.35.0':
+    resolution: {integrity: sha512-Ci0Nmtw5ETWLqQJGY4dyF+iWh7PWKy6k303fCEoEmqj2czDrKJCp7yHBNV0XYbo00prj2ZTbCr6I7albYiyONA==}
+    engines: {node: '>=14.18'}
+
+  '@sentry/react@8.35.0':
+    resolution: {integrity: sha512-8Y+s4pE9hvT2TwSo5JS/Enw2cNFlwiLcJDNGCj/Hho+FePFYA59hbN06ouTHWARnO+swANHKZQj24Wp57p1/tg==}
+    engines: {node: '>=14.18'}
+    peerDependencies:
+      react: ^16.14.0 || 17.x || 18.x || 19.x
+
+  '@sentry/tracing@7.114.0':
+    resolution: {integrity: sha512-eldEYGADReZ4jWdN5u35yxLUSTOvjsiZAYd4KBEpf+Ii65n7g/kYOKAjNl7tHbrEG1EsMW4nDPWStUMk1w+tfg==}
+    engines: {node: '>=8'}
+
+  '@sentry/types@7.114.0':
+    resolution: {integrity: sha512-tsqkkyL3eJtptmPtT0m9W/bPLkU7ILY7nvwpi1hahA5jrM7ppoU0IMaQWAgTD+U3rzFH40IdXNBFb8Gnqcva4w==}
+    engines: {node: '>=8'}
+
+  '@sentry/types@8.35.0':
+    resolution: {integrity: sha512-AVEZjb16MlYPifiDDvJ19dPQyDn0jlrtC1PHs6ZKO+Rzyz+2EX2BRdszvanqArldexPoU1p5Bn2w81XZNXThBA==}
+    engines: {node: '>=14.18'}
+
+  '@sentry/utils@7.114.0':
+    resolution: {integrity: sha512-319N90McVpupQ6vws4+tfCy/03AdtsU0MurIE4+W5cubHME08HtiEWlfacvAxX+yuKFhvdsO4K4BB/dj54ideg==}
+    engines: {node: '>=8'}
+
+  '@sentry/utils@8.35.0':
+    resolution: {integrity: sha512-MdMb6+uXjqND7qIPWhulubpSeHzia6HtxeJa8jYI09OCvIcmNGPydv/Gx/LZBwosfMHrLdTWcFH7Y7aCxrq7cg==}
+    engines: {node: '>=14.18'}
+
   '@stripe/stripe-js@4.0.0':
     resolution: {integrity: sha512-R5zewuzTVPGn4dXkavbgDk8vSILkT5hRlzga10p6JzngR17qKi1fgc27kl58TmaVvgBZGngTRNH2j9kYdvfPGA==}
     engines: {node: '>=12.16'}
@@ -1304,6 +1368,9 @@ packages:
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
+
+  hoist-non-react-statics@3.3.2:
+    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
 
   http-parser-js@0.5.8:
     resolution: {integrity: sha512-SGeBX54F94Wgu5RH3X5jsDtf4eHyRogWX1XGT3b4HuW3tQPM4AaBzoUji/4AAJNXCEOWZ5O0DgZmJw1947gD5Q==}
@@ -2765,6 +2832,83 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
 
+  '@sentry-internal/browser-utils@8.35.0':
+    dependencies:
+      '@sentry/core': 8.35.0
+      '@sentry/types': 8.35.0
+      '@sentry/utils': 8.35.0
+
+  '@sentry-internal/feedback@8.35.0':
+    dependencies:
+      '@sentry/core': 8.35.0
+      '@sentry/types': 8.35.0
+      '@sentry/utils': 8.35.0
+
+  '@sentry-internal/replay-canvas@8.35.0':
+    dependencies:
+      '@sentry-internal/replay': 8.35.0
+      '@sentry/core': 8.35.0
+      '@sentry/types': 8.35.0
+      '@sentry/utils': 8.35.0
+
+  '@sentry-internal/replay@8.35.0':
+    dependencies:
+      '@sentry-internal/browser-utils': 8.35.0
+      '@sentry/core': 8.35.0
+      '@sentry/types': 8.35.0
+      '@sentry/utils': 8.35.0
+
+  '@sentry-internal/tracing@7.114.0':
+    dependencies:
+      '@sentry/core': 7.114.0
+      '@sentry/types': 7.114.0
+      '@sentry/utils': 7.114.0
+
+  '@sentry/browser@8.35.0':
+    dependencies:
+      '@sentry-internal/browser-utils': 8.35.0
+      '@sentry-internal/feedback': 8.35.0
+      '@sentry-internal/replay': 8.35.0
+      '@sentry-internal/replay-canvas': 8.35.0
+      '@sentry/core': 8.35.0
+      '@sentry/types': 8.35.0
+      '@sentry/utils': 8.35.0
+
+  '@sentry/core@7.114.0':
+    dependencies:
+      '@sentry/types': 7.114.0
+      '@sentry/utils': 7.114.0
+
+  '@sentry/core@8.35.0':
+    dependencies:
+      '@sentry/types': 8.35.0
+      '@sentry/utils': 8.35.0
+
+  '@sentry/react@8.35.0(react@18.3.1)':
+    dependencies:
+      '@sentry/browser': 8.35.0
+      '@sentry/core': 8.35.0
+      '@sentry/types': 8.35.0
+      '@sentry/utils': 8.35.0
+      hoist-non-react-statics: 3.3.2
+      react: 18.3.1
+
+  '@sentry/tracing@7.114.0':
+    dependencies:
+      '@sentry-internal/tracing': 7.114.0
+
+  '@sentry/types@7.114.0': {}
+
+  '@sentry/types@8.35.0': {}
+
+  '@sentry/utils@7.114.0':
+    dependencies:
+      '@sentry/types': 7.114.0
+
+  '@sentry/utils@8.35.0':
+    dependencies:
+      '@sentry/types': 8.35.0
+
   '@stripe/stripe-js@4.0.0': {}
 
   '@swc/helpers@0.5.11':
@@ -3357,6 +3501,10 @@ snapshots:
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
+
+  hoist-non-react-statics@3.3.2:
+    dependencies:
+      react-is: 16.13.1
 
   http-parser-js@0.5.8: {}
 
