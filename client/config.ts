@@ -6,7 +6,7 @@ const checkConfig = (server: string): Config | {} => {
   switch (server) {
     case "production":
       config = {
-        baseUrl: "https://woof-chi.vercel.app",
+        baseUrl: "https://backendwoof.vercel.app",
       };
       break;
     case "local":
